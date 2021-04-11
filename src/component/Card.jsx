@@ -1,11 +1,11 @@
 import React from "react";
 import "./cssFile/Card.css";
-import AboutStation from "./AboutStation.jsx";
+import { Link } from "react-router-dom";
 function Card() {
   return (
-    <div className="card" onClick={() => <AboutStation />}>
-      Card is here
-    </div>
+    <Link to="/details">
+      <div className="card">Card is here</div>
+    </Link>
   );
 }
 

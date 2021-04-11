@@ -1,7 +1,10 @@
 import React from "react";
 
 function AboutStation() {
-  return <div>hii we are in bout stat</div>;
+  return <div className="aboutStation">
+      
+
+  </div>;
 }
 
 export default AboutStation;
