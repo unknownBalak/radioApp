@@ -11,8 +11,24 @@ function Body() {
   }, []);
   // console.log(data[0].country);
   let subArr = [];
-  for (let i = 0; i < 10; i++) {
-    subArr.push(<Card key={i} />);
+  let limit = 10;
+  if (data.length !== 0) {
+    for (let i = 0; i < limit; i++) {
+      let station = data[i];
+      console.log(station.country);
+      // console.log(station);
+      subArr.push(
+        <Card
+          key={i}
+          cn={station.country}
+          logo={station.favicon}
+          state={station.state}
+          link={station.url}
+          stationName={station.name}
+          votes={station.votes}
+        />
+      );
+    }
   }
   console.log(data);
   if (data.length === 0) {
