@@ -12,7 +12,7 @@ function Body() {
   // console.log(data[0].country);
   let subArr = [];
   for (let i = 0; i < 10; i++) {
-    subArr.push(<Card key={i} cn={data[0].country} />);
+    subArr.push(<Card key={i} />);
   }
   console.log(data);
   if (data.length === 0) {
