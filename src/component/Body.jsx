@@ -9,6 +9,11 @@ function Body() {
       setData([...res]);
     });
   }, []);
+  // console.log(data[0].country);
+  let subArr = [];
+  for (let i = 0; i < 10; i++) {
+    subArr.push(<Card key={i} cn={data[0].country} />);
+  }
   console.log(data);
   if (data.length === 0) {
     return (
@@ -17,13 +22,7 @@ function Body() {
       </div>
     );
   } else {
-    return (
-      <div className="bodyBar">
-        {data.map((item, index) => {
-          if (index <= 10) return <Card key={index} />;
-        })}
-      </div>
-    );
+    return <div className="bodyBar">{subArr}</div>;
   }
 }
 
