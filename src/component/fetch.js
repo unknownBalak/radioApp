@@ -1,6 +1,5 @@
 import axios from "axios";
-let data = [],
-  flag = 1;
+let data = [];
 let url = "https://fr1.api.radio-browser.info/json/stations";
 function makeGetRequest(url) {
   return new Promise(function (resolve, reject) {
@@ -9,7 +8,6 @@ function makeGetRequest(url) {
         resolve(res.data);
       },
       (error) => {
-        flag = 0;
         reject(error);
       }
     );
@@ -17,8 +15,7 @@ function makeGetRequest(url) {
 }
 async function main() {
   let result = await makeGetRequest(url);
-  data.push(...result);
-  return data;
+  return result;
 }
 
 export default main();

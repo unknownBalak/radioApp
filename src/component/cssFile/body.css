@@ -1,8 +1,15 @@
 .bodyBar {
   display: flex;
   flex: 70%;
-  border: 1px solid gray;
   height: 500px;
   max-width: 70%;
   flex-wrap: wrap;
+  position: relative;
+}
+.loadginSign {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
 }
