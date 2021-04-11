@@ -8,4 +8,5 @@ fetch(url)
   .catch((error) => {
     alert("Please enter a valid string!!");
   });
-console.log(data);
+// console.log(data);
+export default data;
