@@ -1,0 +1,8 @@
+.bodyBar {
+  display: flex;
+  flex: 70%;
+  border: 1px solid gray;
+  height: 500px;
+  max-width: 70%;
+  flex-wrap: wrap;
+}

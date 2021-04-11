@@ -1,0 +1,8 @@
+.card {
+  height: 300px;
+  width: 150px;
+  background-color: #c4c4c4;
+  margin: 10px;
+}
+.card:hover {
+}

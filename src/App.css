@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.fullGrowContainer {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  border: 2px solid red;
+  min-height: 100%;
+  padding: 0 30px;
+}
