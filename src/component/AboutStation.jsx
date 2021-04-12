@@ -1,40 +1,43 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./cssFile/aboutstation.css";
 import "./cssFile/animation.css";
-import Nav from "./Nav";
-import { Button } from "react-bootstrap";
-function AboutStation() {
+import { StationContext } from "./StationProvider";
+import { Link } from "react-router-dom";
+function AboutStation(props) {
+  const data = useContext(StationContext);
+  let { index } = props.location.state[0];
+  let stationName = data[index];
+  if (stationName) {
+    localStorage.setItem("key", JSON.stringify(stationName));
+  }
+
+  let { country, favicon, homepage, language, name, url, state, votes } = JSON.parse(
+    localStorage.getItem("key")
+  );
   return (
     <div className="aboutStation">
-      <Nav />
       <div className="aboutStationBody">
         <div className="box left">
-          <img src="https://via.placeholder.com/200" alt="name" />
+          <img src={favicon ? favicon : `https://picsum.photos/id/${votes}/200/300`} alt="name" />
         </div>
         <div className="box right">
-          <Button variant="success">Click here</Button>
-          <div className="animation">
-            <div className="span1 spanClass">
-              <span className="q q1"> Question 1 </span>
-              {/* <span className="a a1"> answer 1 </span> */}
-            </div>
-            <div className="span2 spanClass">
-              <span className="q q2"> Question 2 </span>
-              {/* <span className="a a2"> answer 2 </span> */}
-            </div>
-            <div className="span3 spanClass">
-              <span className="q q3"> Question 3 </span>
-              {/* <span className="a a3"> answer 3 </span> */}
-            </div>
-            <div className="span4 spanClass">
-              <span className="q q4"> Question 4 </span>
-              {/* <span className="a a4"> answer 4 </span> */}
-            </div>
-            <div className="span5 spanClass">
-              <span className="q q5"> Question 5 </span>
-              {/* <span className="a a5"> answer 5 </span> */}
-            </div>
-          </div>
+          <p className="spanClass">
+            The station <span className="hl"> {name} </span> situated in
+            <span className="hl">{state ? state : "state not known"}</span>,
+            <span className="hl">{country ? country : "Country not known"}</span>. The station plays
+            songs in
+            <span className="hl"> {language ? language : "Language not known"}</span>
+            If you want to visit their home page You can click
+            <Link to={{ pathname: homepage }} target="_blank" className="hl">
+              Here
+            </Link>
+            to visit. And If you don't want to visit there website then you can go listen music of
+            them. Click
+            <Link to={{ pathname: url }} target="_blank" className="hl">
+              Here
+            </Link>
+            . You know the station have <span className="hl">{votes}</span> out of 100 votes.
+          </p>
         </div>
       </div>
     </div>

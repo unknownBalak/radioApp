@@ -40,3 +40,28 @@
     transform: translateX(-50%);
   }
 }
+
+/* Below animation is for About station page */
+.left img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px 7px grey;
+  background-color: white;
+  position: relative;
+  transform-origin: top;
+  -moz-animation: thumbnail 4s ease-in-out infinite alternate;
+  -o-animation: thumbnail 4s ease-in-out infinite alternate;
+  animation: thumbnail 4s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes thumbnail {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
+}
