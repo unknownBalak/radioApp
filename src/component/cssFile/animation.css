@@ -1,20 +1,8 @@
-.nav {
-  height: 50px;
-  color: black;
-  background-color: white;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-}
-
-/* .nav p {
+.nav p {
   padding: 0;
   margin: 0;
   font-size: 20px;
   font-weight: bolder;
-  animation-name: move;
   position: absolute;
   animation: move 20s ease-in-out infinite;
   -webkit-animation: move 20s ease-in-out infinite;
@@ -30,4 +18,25 @@
     right: 100%;
     transform: translateX(-200%);
   }
-} */
+}
+.spanClass {
+  position: relative;
+}
+.q {
+  display: inline-block;
+  position: absolute;
+  animation: question 4s ease-in-out 1;
+  -webkit-animation: question 4s ease-in-out 1;
+  -o-animation: question 4s ease-in-out 1;
+  -moz-animation: question 4s ease-in-out 1;
+}
+@keyframes question {
+  from {
+    transform: translateX(-100%);
+    left: -30px;
+  }
+  to {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,6 +1,14 @@
 .app {
   display: flex;
   flex-direction: column;
+  background-image: url("./component/resources/desktopLandingPage.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  min-height: 100vh;
+  flex-grow: 1;
+  box-shadow: 0 3px 30px 30px rgb(234 91 91 / 62%), inset 0 -9px 10px 3px rgb(234 91 91 / 61%);
 }
 .fullGrowContainer {
   display: flex;
@@ -8,7 +16,7 @@
   justify-content: space-between;
 }
 .mainContainer {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   min-height: 100%;
   padding: 0 30px;
 }

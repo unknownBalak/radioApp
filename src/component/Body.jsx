@@ -9,14 +9,11 @@ function Body() {
       setData([...res]);
     });
   }, []);
-  // console.log(data[0].country);
   let subArr = [];
-  let limit = 10;
+  let limit = 20;
   if (data.length !== 0) {
     for (let i = 0; i < limit; i++) {
       let station = data[i];
-      console.log(station.country);
-      // console.log(station);
       subArr.push(
         <Card
           key={i}

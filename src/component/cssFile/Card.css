@@ -3,9 +3,12 @@ a {
   height: 300px;
   margin: 6px;
 }
-.card {
+.card,
+.card img {
   height: 300px;
   width: 150px;
-  background-color: #c4c4c4;
+}
+.card {
+  background-color: #966060;
   cursor: pointer;
 }
