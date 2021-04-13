@@ -8,26 +8,8 @@
   overflow: hidden;
   position: relative;
 }
-
-/* .nav p {
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
-  font-weight: bolder;
-  animation-name: move;
-  position: absolute;
-  animation: move 20s ease-in-out infinite;
-  -webkit-animation: move 20s ease-in-out infinite;
-  -o-animation: move 20s ease-in-out infinite;
-  -moz-animation: move 20s ease-in-out infinite;
+@media (max-width: 992px) {
+  .nav {
+    display: none;
+  }
 }
-@keyframes move {
-  from {
-    transform: translateX(100%);
-    right: 0px;
-  }
-  to {
-    right: 100%;
-    transform: translateX(-200%);
-  }
-} */

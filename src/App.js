@@ -3,6 +3,7 @@ import Search from "./component/Search";
 import Body from "./component/Body";
 import AboutStation from "./component/AboutStation";
 import { StationProvider } from "./component/StationProvider";
+import Footer from "./component/Footer";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
@@ -23,6 +24,7 @@ function App() {
           </Route>
         </Switch>
       </StationProvider>
+      <Footer />
     </Router>
   );
 }

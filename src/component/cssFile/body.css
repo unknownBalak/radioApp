@@ -1,7 +1,6 @@
 .bodyBar {
   display: flex;
   flex: 70%;
-  height: 500px;
   max-width: 70%;
   flex-wrap: wrap;
   position: relative;

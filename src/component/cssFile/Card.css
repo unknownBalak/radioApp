@@ -1,7 +1,12 @@
 a {
-  border: 3px solid rebeccapurple;
   height: 300px;
   margin: 6px;
+  padding: 5px;
+}
+a:hover {
+  background-color: #b6b1b16e;
+  color: white !important;
+  border-radius: 10px;
 }
 .card,
 .card img {
