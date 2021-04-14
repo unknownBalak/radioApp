@@ -4,8 +4,8 @@ export function Update() {
   let [i, setI] = useState(0);
   let arr = [
     "Hold on tightly...",
-    "It is taking a bit time. please wait..",
-    "It might some network issue Please re-feresh",
+    "It is taking a bit of time. Please wait...",
+    "You might have network issues, please refresh.",
   ];
   useEffect(() => {
     let id = setInterval(() => {
