@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 export function Update() {
   let [i, setI] = useState(0);
   let arr = [
-    "Hold one tight...",
-    "It is taking bit time. please wait &#x263A;",
-    "It might some network issue Please referesh",
+    "Hold on tightly...",
+    "It is taking a bit time. please wait..",
+    "It might some network issue Please re-feresh",
   ];
   useEffect(() => {
     let id = setInterval(() => {
