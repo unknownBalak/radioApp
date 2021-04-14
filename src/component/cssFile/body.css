@@ -11,7 +11,6 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
-  transform: translateY(-50%);
 }
 
 .bodyBar .button {
@@ -30,4 +29,15 @@
 .bodyBar .button > button:hover {
   background-color: antiquewhite;
   color: black;
+}
+@media (max-width: 992px) {
+  .loadginSign {
+    width: 100%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+  .bodyBar {
+    width: 100%;
+    text-align: center;
+  }
 }

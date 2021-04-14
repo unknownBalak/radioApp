@@ -2,7 +2,7 @@
   padding: 30px;
   border: 2px solid green;
   background-color: rgb(234 234 234 / 58%);
-  height: 200px;
+  /* height: 200px; */
   max-height: 500px;
 }
 .searchBar h1 {
@@ -27,12 +27,6 @@
   top: calc(100% + -12px);
 }
 
-@media (max-width: 992px) {
-  .searchBar {
-    height: 150px;
-    max-height: 500px;
-  }
-}
 .warning {
   color: rgb(195 53 53);
   font-size: 30px;
