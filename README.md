@@ -1,7 +1,7 @@
 # Radio App in 3 Page
 
 Hii, I made this application where I used
-[radio App](https://fr1.api.radio-browser.info/json/stations) to fetch all station and. And I displayed data on my application.
+[radio API](https://fr1.api.radio-browser.info/json/stations) to fetch all station and. And I displayed data on my application.
 
 ## body page
 
@@ -17,11 +17,16 @@ This page will tell about station. What is the name of station and Where does it
 
 Acutally I am currently working on this. So This will not work for now. Hope I will update this in coming 2 or 3 days.
 
-# Here is the some Picture, How my website will look like.
+Check it out. Link is in right side
 
-## Landing Page. 
-   ![LandingPage]("../src/component/resources/homepage.png")
+<!-- # Here is the some Picture, How my website will look like. -->
 
-## Description page: 
-  ![DescriptionPage]("../src/component/resources/description.png)
+<!-- ## Landing Page. -->
+
+<!-- ![LandingPage]("../src/component/resources/homepage.png") -->
+
+<!-- ## Description page: -->
+
+<!-- ![DescriptionPage]("../src/component/resources/description.png) -->
+
 # Thanks For Reading.
