@@ -13,3 +13,21 @@
   transform: translateX(-50%);
   transform: translateY(-50%);
 }
+
+.bodyBar .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bodyBar .button > button {
+  padding: 15px;
+  font-size: 20px;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.bodyBar .button > button:hover {
+  background-color: antiquewhite;
+  color: black;
+}

@@ -4,7 +4,7 @@ import "./cssFile/animation.css";
 function Nav() {
   return (
     <div className="nav">
-      <p>Click over the image/Button to see magic</p>
+      <p>Click over the image to know more about station.</p>
     </div>
   );
 }
