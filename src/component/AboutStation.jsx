@@ -36,7 +36,7 @@ function AboutStation(props) {
             <Link to={{ pathname: url }} target="_blank" className="hl">
               Here
             </Link>
-            . You know the station have <span className="hl">{votes}</span> out of 100 votes.
+            . You know the station have <span className="hl">{votes}</span> votes.
           </p>
         </div>
       </div>

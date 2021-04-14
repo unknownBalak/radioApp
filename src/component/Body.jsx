@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./cssFile/body.css";
 import Card from "./Card";
 import { StationContext } from "./StationProvider";
+import { Update } from "./Update";
 function Body() {
   const data = useContext(StationContext);
   const [limit, setLimit] = useState(10);
@@ -20,11 +21,14 @@ function Body() {
       );
     }
   }
+
   // console.log(data);
   if (data.length === 0) {
     return (
       <div className="bodyBar">
-        <h2 className="loadginSign">Loading....</h2>
+        <h1 className="loadginSign">
+          <Update />
+        </h1>
       </div>
     );
   } else {
