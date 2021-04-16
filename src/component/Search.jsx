@@ -5,6 +5,9 @@ function Search() {
   const [value, setValue] = useState("noFilter");
   const [input, setInput] = useState("");
   const floatDiv = useRef();
+
+  console.log(input, value);
+
   function debounce(func, wait = 10, immediate = true) {
     var timeout;
     return function () {
