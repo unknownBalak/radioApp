@@ -16,7 +16,7 @@ function App() {
             <div className="app ">
               <Nav />
               {/* In navigation will display highlight <Nav /> */}
-              <div className="fullGrowContainer mainContainer">
+              <div className="fullGrowContainer mainContainer" style={{ position: "relative" }}>
                 <Search />
                 <Body />
               </div>
