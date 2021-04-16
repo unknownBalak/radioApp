@@ -22,12 +22,9 @@ function Search() {
   }
 
   const updatePostion = () => {
-    console.log(window.scrollY);
     if (floatDiv.current) {
-      console.log(floatDiv.current);
       let element = floatDiv.current;
-      console.log(element.offsetHeight);
-      let top = window.scrollY + window.innerHeight / 2 - element.offsetHeight / 2 - 100;
+      let top = window.scrollY + window.innerHeight / 2 - element.offsetHeight / 2;
       element.style.top = `${top}px`;
     }
   };
