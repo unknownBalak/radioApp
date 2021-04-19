@@ -1,10 +1,8 @@
-import Nav from "./component/Nav";
-import Search from "./component/Search";
-import Body from "./component/Body";
 import AboutStation from "./component/AboutStation";
 import { StationProvider } from "./component/StationProvider";
 import Footer from "./component/Footer";
-import "./App.css";
+import Home from "./component/Home";
+// import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
@@ -12,16 +10,7 @@ function App() {
       <StationProvider>
         <Switch>
           <Route path="/details" component={AboutStation} />
-          <Route path="/">
-            <div className="app ">
-              <Nav />
-              {/* In navigation will display highlight <Nav /> */}
-              <div className="fullGrowContainer mainContainer" style={{ position: "relative" }}>
-                <Search />
-                <Body />
-              </div>
-            </div>
-          </Route>
+          <Route path="/" component={Home} />
         </Switch>
       </StationProvider>
       <Footer />
