@@ -1,10 +1,10 @@
 import React from "react";
 import { useTheme, useThemeUpdate } from "../ThemeContext";
 function ContextAPI() {
-  const darkTheme = useTheme();
-  const toggleTheme = useThemeUpdate();
-  
-  const style = {
+const darkTheme = useTheme();
+const toggleTheme = useThemeUpdate();
+ 
+ const style = {
     margin: "auto",
     marginTop: "20px",
     backgroundColor: darkTheme ? "#333" : "#CCC",
@@ -12,7 +12,6 @@ function ContextAPI() {
     padding: "2rem",
     margin: "6rem",
   };
-
   return (
     <>
       <button style={{ padding: "10px" }} onClick={toggleTheme}>
