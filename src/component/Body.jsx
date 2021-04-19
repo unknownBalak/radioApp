@@ -1,12 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./cssFile/body.css";
 import Card from "./Card";
-import { StationContext } from "./StationProvider";
+// import { StationContext } from "./StationProvider";
 import { Update } from "./Update";
-function Body() {
-  const data = useContext(StationContext);
+
+function Body({ data }) {
+  // const data = useContext(StationContext);
+
   const [limit, setLimit] = useState(10);
   let subArr = [];
+  console.log(data);
   if (data.length !== 0) {
     for (let i = 0; i < limit; i++) {
       let station = data[i];
@@ -21,8 +24,6 @@ function Body() {
       );
     }
   }
-
-  // console.log(data);
   if (data.length === 0) {
     return (
       <div className="bodyBar">

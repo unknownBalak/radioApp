@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="footer">
       Made with <span className="love">&hearts;</span> by Shashi, Get code on Github. Click{" "}
-      <Link to={{ path: "https:github.com" }} target="_blanck">
+      <Link to={{ pathname: "https://github.com/unknownBalak/radioapp" }} target="_blanck">
         Here
       </Link>
     </div>

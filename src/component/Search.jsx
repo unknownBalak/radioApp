@@ -1,12 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext, useEffect } from "react";
 import "./cssFile/search.css";
-
 function Search() {
-  const [value, setValue] = useState("noFilter");
-  const [input, setInput] = useState("");
+  const [selectValue, setSelectValue] = useState("noFilter");
+  const [inputValue, setInputValue] = useState("");
   const floatDiv = useRef();
-
-  console.log(input, value);
 
   function debounce(func, wait = 10, immediate = true) {
     var timeout;
@@ -31,6 +28,7 @@ function Search() {
       element.style.top = `${top}px`;
     }
   };
+
   window.addEventListener("scroll", debounce(updatePostion));
   return (
     <div className="searchBar">
@@ -38,7 +36,7 @@ function Search() {
         <h1>Filter BY: </h1>
         <div className="tagName">
           <label htmlFor="drowpdown"> Select from DrowpDown: </label>
-          <select id="dropdown" onChange={(e) => setValue(e.target.value)} required>
+          <select id="dropdown" onChange={(e) => setSelectValue(e.target.value)} required>
             <option value="noFilter"> No Filter </option>
             <option value="country">Country </option>
             <option value="state"> State </option>
@@ -47,9 +45,9 @@ function Search() {
           </select>
           <input
             type="text"
-            className={value !== "noFilter" ? "active" : ""}
+            className={selectValue !== "noFilter" ? "active" : ""}
             placeholder="Enter value name"
-            onChange={(e) => setInput(e.target.value)}
+            onChange={(e) => setInputValue(e.target.value)}
           />
         </div>
         <h3 style={{ color: "black" }}>

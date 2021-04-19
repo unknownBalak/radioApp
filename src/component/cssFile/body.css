@@ -19,8 +19,8 @@
   align-items: center;
 }
 .bodyBar .button > button {
-  padding: 15px;
-  font-size: 20px;
+  padding: 10px;
+  font-size: 18px;
   background-color: rgb(65, 65, 65);
   color: white;
   border: none;

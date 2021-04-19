@@ -10,7 +10,6 @@ function AboutStation(props) {
   if (stationName) {
     localStorage.setItem("key", JSON.stringify(stationName));
   }
-
   let { country, favicon, homepage, language, name, url, state, votes } = JSON.parse(
     localStorage.getItem("key")
   );
