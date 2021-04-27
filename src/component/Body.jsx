@@ -9,7 +9,7 @@ function Body({ data }) {
 
   const [limit, setLimit] = useState(10);
   let subArr = [];
-  console.log(data);
+  // console.log(data);
   if (data.length !== 0) {
     for (let i = 0; i < limit; i++) {
       let station = data[i];
