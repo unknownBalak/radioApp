@@ -5,6 +5,7 @@ import Body from "./Body";
 import "./cssFile/search.css";
 import "./cssFile/home.css";
 import { StationContext } from "./StationProvider";
+import { filterData } from "./filter.js";
 
 function Home() {
   const data = useContext(StationContext);
@@ -14,15 +15,8 @@ function Home() {
   const floatDiv = useRef();
   let newArr = [];
 
-  if (selectValue === "noFilter") {
-    newArr.push(...data);
-  }
-  if (selectValue === "country") {
-    let country = inputValue.toLowerCase();
-    newArr = data.filter((item, index) => item.country.toLowerCase().includes(country));
-  }
+  newArr = filterData(inputValue, selectValue, data);
 
-  console.log("new Arr is ", newArr);
   function debounce(func, wait = 10, immediate = true) {
     var timeout;
     return function () {
@@ -62,7 +56,6 @@ function Home() {
                 <option value="country">Country </option>
                 <option value="state"> State </option>
                 <option value="tag">Tag name </option>
-                <option value="station">Station Name </option>
               </select>
               <input
                 type="text"

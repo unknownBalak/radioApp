@@ -61,3 +61,12 @@
     margin: auto;
   }
 }
+.playMusic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bolder;
+  color: brown;
+  margin-bottom: 10px;
+}

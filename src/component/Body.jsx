@@ -16,10 +16,10 @@ function Body({ data }) {
       subArr.push(
         <Card
           key={i}
-          logo={station.favicon}
+          logo={station ? station.favicon : " "}
           index={i}
-          id={station.stationuuid}
-          votes={station.votes}
+          id={station ? station.stationuuid : " "}
+          votes={station ? station.votes : " "}
         />
       );
     }
@@ -37,7 +37,17 @@ function Body({ data }) {
       <div className="bodyBar">
         {subArr}
         <div className="button">
-          <button onClick={() => setLimit((prev) => prev + 10)}>Load More</button>
+          {limit <= data.length ? (
+            <button onClick={() => setLimit((prev) => prev + 10)}>Load More</button>
+          ) : (
+            <div
+              style={{ backgroundColor: "black", padding: "10px", borderRadius: "10px" }}
+              className="warning"
+            >
+              {" "}
+              No more data
+            </div>
+          )}
         </div>
       </div>
     );
