@@ -10,7 +10,7 @@ export const StationProvider = (props) => {
       setData([...res]);
     });
   }, []);
-  console.log(data);
+  // console.log(data);
 
   return <StationContext.Provider value={data}>{props.children}</StationContext.Provider>;
 };
