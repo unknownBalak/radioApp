@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./cssFile/aboutstation.css";
 import "./cssFile/animation.css";
 import { StationContext } from "./StationProvider";
-import { validateURL } from "./urlValidationFile.js";
+// import { validateURL } from "./urlValidationFile.js";
 import { Link } from "react-router-dom";
 function AboutStation(props) {
   const data = useContext(StationContext);
