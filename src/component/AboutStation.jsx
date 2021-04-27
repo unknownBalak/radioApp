@@ -18,7 +18,7 @@ function AboutStation(props) {
     localStorage.getItem("key")
   );
 
-  let bool = validateURL(url);
+  // let bool = validateURL(url);
 
   let music = url ? (
     <audio controls>
@@ -28,7 +28,7 @@ function AboutStation(props) {
     "We don't have valid link here to play this radio."
   );
 
-  console.log("this will tell about link is valid or not", bool);
+  // console.log("this will tell about link is valid or not", bool);
   return (
     <div className="aboutStation">
       <div className="aboutStationBody">
