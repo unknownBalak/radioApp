@@ -2,18 +2,33 @@ import React, { useContext } from "react";
 import "./cssFile/aboutstation.css";
 import "./cssFile/animation.css";
 import { StationContext } from "./StationProvider";
+// import { validateURL } from "./urlValidationFile.js";
 import { Link } from "react-router-dom";
 function AboutStation(props) {
   const data = useContext(StationContext);
-  let { index } = props.location.state[0];
-  let stationName = data[index];
+  let { id } = props.location.state[0];
+  // console.log(index);
+  // let stationName = data[index];
+  let stationName = data.find((item, index) => item.stationuuid === id);
+  // console.log(stationName);
   if (stationName) {
     localStorage.setItem("key", JSON.stringify(stationName));
   }
-
   let { country, favicon, homepage, language, name, url, state, votes } = JSON.parse(
     localStorage.getItem("key")
   );
+
+  // let bool = validateURL(url);
+
+  let music = url ? (
+    <audio controls>
+      <source src={url} />
+    </audio>
+  ) : (
+    "We don't have valid link here to play this radio."
+  );
+
+  // console.log("this will tell about link is valid or not", bool);
   return (
     <div className="aboutStation">
       <div className="aboutStationBody">
@@ -38,6 +53,7 @@ function AboutStation(props) {
             </Link>
             . You know the station have <span className="hl">{votes}</span> votes.
           </p>
+          <div className="playMusic">Let's Play the music : {music}</div>
         </div>
       </div>
     </div>

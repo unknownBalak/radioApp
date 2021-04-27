@@ -1,9 +1,12 @@
+import Home from "./component/Home";
 import AboutStation from "./component/AboutStation";
 import { StationProvider } from "./component/StationProvider";
 import Footer from "./component/Footer";
-import Home from "./component/Home";
-// import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
+
+export const ThemeContext = React.createContext();
+
 function App() {
   return (
     <Router>
