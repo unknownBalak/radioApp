@@ -64,9 +64,6 @@ function Home() {
                 onChange={(e) => setInputValue(e.target.value)}
               />
             </div>
-            <h3 style={{ color: "black" }}>
-              <span className="warning"> Note: </span> Working on filtering{" "}
-            </h3>
           </div>
         </div>
         <Body data={newArr} />
