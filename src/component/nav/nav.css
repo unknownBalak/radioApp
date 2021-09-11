@@ -1,0 +1,22 @@
+.nav {
+  height: 50px;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.nav p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+}
+@media (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+}

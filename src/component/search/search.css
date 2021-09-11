@@ -1,0 +1,63 @@
+.searchBar {
+  position: relative;
+  width: 30%;
+  min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.childContainer {
+  background-color: rgb(234 234 234 / 58%);
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  transition: all 1s;
+}
+.searchBar h1 {
+  color: #c1f700;
+  font-size: 1.5em;
+  display: block !important;
+}
+.tagName label {
+  font-size: 18px;
+  /* font-weight: 500; */
+}
+.tagName select {
+  height: 30px;
+  font-size: 14px;
+}
+.tagName {
+  position: relative;
+}
+.tagName input {
+  display: block;
+  margin-top: 20px;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.tagName .active {
+  visibility: initial;
+  top: calc(100% + -12px);
+  padding: 5px;
+}
+.warning {
+  color: rgb(195 53 53);
+  font-size: 1.5em;
+}
+@media (max-width: 992px) {
+  .searchBar {
+    width: 100%;
+  }
+  .childContainer {
+    position: initial;
+    margin: auto;
+    transform: none;
+  }
+}

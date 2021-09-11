@@ -1,0 +1,62 @@
+.nav p {
+  animation: move 20s ease-in-out infinite;
+  -webkit-animation: move 20s ease-in-out infinite;
+  -o-animation: move 20s ease-in-out infinite;
+  -moz-animation: move 20s ease-in-out infinite;
+}
+@keyframes move {
+  from {
+    transform: translateX(100%);
+    right: 0px;
+  }
+  to {
+    right: 100%;
+    transform: translateX(-200%);
+  }
+}
+.spanClass {
+  position: relative;
+}
+.q {
+  display: inline-block;
+  position: absolute;
+  animation: question 4s ease-in-out 1;
+  -webkit-animation: question 4s ease-in-out 1;
+  -o-animation: question 4s ease-in-out 1;
+  -moz-animation: question 4s ease-in-out 1;
+}
+@keyframes question {
+  from {
+    transform: translateX(-100%);
+    left: -30px;
+  }
+  to {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Below animation is for About station page */
+.left img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px 7px grey;
+  background-color: white;
+  position: relative;
+  transform-origin: top;
+  -moz-animation: thumbnail 4s ease-in-out infinite alternate;
+  -o-animation: thumbnail 4s ease-in-out infinite alternate;
+  animation: thumbnail 4s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes thumbnail {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
+}
