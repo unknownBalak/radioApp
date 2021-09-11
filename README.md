@@ -15,7 +15,18 @@ This page will tell about station. What is the name of station and Where does it
 
 ## Filter by country, state, name, tag (search page).
 
-Acutally I am currently working on this. So This will not work for now. Hope I will update this in coming 2 or 3 days.
+Here I have added a small input field that will filter on the basis of country, state and name.
+
+## Library I used for this build?
+
+    I used a library called  [axios](https://www.npmjs.com/package//axios) to get radio station information.
+
+## JS concept implemented.
+
+     1) async/await
+     2) ContextAPI
+     3) localStorage
+     4) Function Programming.
 
 Check it out. Link is in right side
 
