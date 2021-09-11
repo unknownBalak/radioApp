@@ -19,7 +19,7 @@ Here I have added a small input field that will filter on the basis of country, 
 
 ## Library I used for this build?
 
-    I used a library called  [axios](https://www.npmjs.com/package//axios) to get radio station information.
+I used a library called [axios](https://www.npmjs.com/package//axios) to get radio station information.
 
 ## JS concept implemented.
 
