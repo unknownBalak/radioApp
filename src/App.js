@@ -5,7 +5,6 @@ import Footer from "./component/footer/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
 import FilteredContextProvider from "./component/store/FilterContext.js";
-export const ThemeContext = React.createContext();
 
 function App() {
   return (
