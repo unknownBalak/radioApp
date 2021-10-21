@@ -3,10 +3,9 @@ import "./body.css";
 import Card from "../card/Card";
 import { FilteredContext } from "../store/FilterContext";
 import { Update } from "../quickView/Update";
-
 function Body() {
   const { newArr } = useContext(FilteredContext);
-  let data = newArr;
+  let data = newArr || [];
   const [limit, setLimit] = useState(10);
   let subArr = [];
   if (data.length !== 0) {

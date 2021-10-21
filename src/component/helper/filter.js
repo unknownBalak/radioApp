@@ -1,5 +1,5 @@
 export function filterData(input, value, data) {
-  let filterData;
+  let filterData ="";
   if (value === "noFilter") {
     return data;
   } else if (value === "country") {

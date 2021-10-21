@@ -16,6 +16,7 @@
 // }
 
 export const updatePostion = (floatDiv) => {
+  console.log(floatDiv);
   if (floatDiv.current) {
     let element = floatDiv.current;
     let top =

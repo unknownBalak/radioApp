@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <StationProvider>
-        <FilteredContextProvider>
+        <FilteredContextProvider> 
           <Switch>
             <Route path="/details" component={AboutStation} />
             <Route path="/" component={Home} />

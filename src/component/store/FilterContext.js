@@ -7,6 +7,7 @@ export const FilteredContext = createContext();
 
 const FilteredContextProvider = (props) => {
   const originalData = useContext(StationContext);
+  
   const [selectValue, setSelectValue] = useState("noFilter");
   const [inputValue, setInputValue] = useState("");
 
