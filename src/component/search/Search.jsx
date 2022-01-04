@@ -6,21 +6,27 @@ function Search() {
   const { setSelectValue, setInputValue, inputValue, selectValue } =
     useContext(FilteredContext);
   const floatDiv = useRef();
-  // const updatePostion = (floatDiv) => {
-  //   console.log(floatDiv);
-  //   if (floatDiv.current) {
-  //     let element = floatDiv.current;
-  //     let top =
-  //       window.scrollY + window.innerHeight / 2 - element.offsetHeight / 2;
-  //     element.style.top = `${top}px`;
-  //   }
-  // };
+  const searBarRef = useRef();
+  const updatePostion = (floatDiv, e) => {
+    if (floatDiv.current) {
+      let element = floatDiv.current;
+      let top =
+        window.scrollY + window.innerHeight / 2 - element.offsetHeight / 2;
+      element.style.top = `${top}px`;
+    }
+  };
 
-  // console.log("floatDiv in search.jsx", floatDiv);
-  // window.addEventListener("scroll", updatePostion(floatDiv));
+  console.log("floatDiv in search.jsx", floatDiv);
+
+  const searchBar = searBarRef.current;
+  if (searchBar) {
+    window.addEventListener("scroll", function (event) {
+      updatePostion(floatDiv, event);
+    });
+  }
 
   return (
-    <div className="searchBar" style={{ border: "3px solid red" }}>
+    <div className="searchBar" ref={searBarRef}>
       <div className="childContainer" ref={floatDiv}>
         <h1>Filter BY: </h1>
         <div className="tagName">

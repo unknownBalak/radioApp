@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function AboutStation(props) {
   const data = useContext(StationContext);
-  
+
   console.log("This is in about station", props.location);
   let { id } = props.location.state[0];
 
@@ -15,7 +15,7 @@ function AboutStation(props) {
   if (stationName) {
     localStorage.setItem("key", JSON.stringify(stationName));
   }
-  
+
   let { country, favicon, homepage, language, name, url, state, votes } =
     JSON.parse(localStorage.getItem("key"));
 
