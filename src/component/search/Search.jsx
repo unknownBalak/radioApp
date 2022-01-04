@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useState } from "react";
+import React, { useRef, useContext } from "react";
 import "./search.css";
 // import { updatePostion } from "../helper/helper.js";
 import { FilteredContext } from "../store/FilterContext.js";
