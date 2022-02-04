@@ -1,5 +1,5 @@
 import axios from "axios";
-let url = "https://fr1.api.radio-browser.info/json/stations21";
+let url = "https://fr1.api.radio-browser.info/json/stations";
 async function makeGetRequest(url) {
   let res = "";
   try {
